@@ -1,93 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Basic JavaScript Dump</title>
+
+<head> </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ <script src="assets/javascript/game.js"></script>
+</script>
+
+<title>The Psychic Game</title>
+
 </head>
-  <body>
-   <div>
-    <p id="directions-text"> <h1>The Psychic Game</h1></p>
-    <h2>Guess letters in (impsychic) to see if you are Psychic</h2>
-    <h2>You get 20 chances, and you'll win $100,000 if you reach 5 wins!</h2>
-   <h3></h3>
+
+<body>
+
+  <div class="container">
+  <div class="row">
+  <div class="col-md-12">
+
+  <div>
+    <p id="directions-text">
+      <h1>The Psychic Game</h1>
+    </p>
+    <h2>Guess the letters in the phrase (impsychic) and see if you are Psychic</h2>
+    <h3>You get 20 chances, and you'll win $100,000 if you reach 5 wins!</h3>
+    
     <p id="wins"> Wins:</p>
     <p id="losses"> Losses:</p>
     <p id="guesses"> Guesses Left:</p>
     <p id="userguesses"> Your Guesses:</p>
-    </div>
-    
-    
 
-    <script type="text/javascript">
+  </div>
 
+  <a class="btn btn-primary" href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" role="button">I want to win more money!!</a>
+  </div>
+  </div>
+  </div>
 
+</container>
+</body>
 
- // 2, create var for the computers choices / make this a random selection in a select amount of words.
-   
-   var imPsychic = ["i","m","p","s","y","c","h","i","c"];
-   for ( var i = 0; i > imPsychic.length; i++) {
-
-  }
-
-   var userguesses = "";
-   
-   console.log (imPsychic);
-
-   var wins = 0;
-   var losses = 0;
-   var guesses = 20;
-
-   
-   var computerChoice = imPsychic[Math.floor(Math.random() * imPsychic.length)];
-   console.log(computerChoice)
-
- // 3,  create user keys and store what they have chosen limmit choices to 20
-   document.onkeypress = function(event) {
-
-    var userchoice = event.key;
-    console.log(event.key)
-
-    if ( guesses != 0 ) {
-     
- 
-     
-    if (userchoice === computerChoice) {
-       wins++;
-    if ( wins === 5)
-       alert("you are a Psychic, $100,000 WINNER")
-
-       computerChoice = imPsychic[Math.floor(Math.random() * imPsychic.length)];
-
-       console.log(computerChoice)
-       
-     }else { 
-
-       losses++;
-
-       (userguesses = userchoice + userguesses)
-
-   }if (userchoice != computerChoice) {
-      
-    guesses--;
-
-    if( guesses === 0) {
-
-        alert("you are not Psychic")
-    }
-    
-
-   }
-}
-   
-
-    document.getElementById('wins').innerHTML = "Wins " + wins;
-    document.getElementById('losses').innerHTML = "losses " + losses;
-    document.getElementById('guesses').innerHTML = "guesses " + guesses;
-    document.getElementById('userguesses').innerHTML = "userguesses " + userguesses;
-
-} 
-
-    </script>
-
-  </body>
 </html>
